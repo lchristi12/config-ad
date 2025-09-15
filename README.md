@@ -93,15 +93,16 @@ Click on DC-1 VM--> network settings--> Network Interface/IP Configuration-->IP 
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, we are going to log into DC-1 via remote desktop conneciton. We are going to disable the firewall to test connectivity--> Locate the IP address on the VM page and scrolling right on the VM or clicking the VM and locating it there in the overview tab--> Open remote desktop connection and copy and past the IP address and click connect--> enter the username and password we created when creating the VM and click ok. You should be able to log into the VM.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1446" height="1080" alt="image" src="https://github.com/user-attachments/assets/a010feda-38ac-41f1-a36e-ae059ff995df" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+To disable the firewall, go to the start menu and click run--> type wf.msc--> click Windows Defender Firewall--> under firewall state, select off and do the same thing for public and private profile--> click apply after.
 </p>
 <br />
 
