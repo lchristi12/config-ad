@@ -61,28 +61,36 @@ Create a Virtual network--> Resource group, Active-Directory-Lab--> Virtual Netw
 
 </p>
 <p>
-Next, we are going to create 2 virtual machines. Click create--> resource group, Active-Directory-Lab--> VM name, DC-1--> region, East US 2--> Windows Server 2022 Datacenter: Azure Edition Hotpatch- x64 Gen2--> size, Standard_D2s_v3- 2vcpus, 8GiB memory--> Administrator account--> create username and password--> Check the licensing box--> Next for disk--> make sure the virtual nextwork recently created is selected--> review and create then click create.
+Next, we are going to create 2 virtual machines. First the domain controller VM. Click create--> resource group, Active-Directory-Lab--> VM name, DC-1--> region, East US 2--> Windows Server 2022 Datacenter: Azure Edition Hotpatch- x64 Gen2--> size, Standard_D2s_v3- 2vcpus, 8GiB memory--> Administrator account--> create username and password--> Check the licensing box--> Next for disk--> make sure the virtual nextwork recently created is selected--> review and create then click create.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1952" height="636" alt="Screenshot 2025-09-01 160024" src="https://github.com/user-attachments/assets/71e7ac0b-b53c-4904-bba5-ce3ca26ab747" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, we are going to create the client VM. Click create--> resource group, Active-Directory-Lab--> VM name, Client-1--> region, East US 2--> Windows 10 Pro, version 22H2- x64 Gen2--> size, Standard_D2s_v3- 2vcpus, 8GiB memory--> Administrator account--> create a username and password --> Check the licensing box--> Next for disk--> make sure the virtual nextwork recently created is selected--> review and create then click create.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1900" height="1227" alt="Screenshot 2025-09-01 160730" src="https://github.com/user-attachments/assets/028a3927-eec8-45e7-af54-980e48f3cad6" />
+<img width="1906" height="1248" alt="Screenshot 2025-09-01 161104" src="https://github.com/user-attachments/assets/5c48615b-021e-40ff-a84f-6b306a8f6a49" />
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, we are going to set DC-1 VM virtual NIC to static so the IP address does not change. We are going to tell Client-1 to use DC-1 as the DNS server. Also, we need to manually configure the DNS settings for Client-1 to use DC-1 IP address.
+
+Click on DC-1 VM--> network settings--> Network Interface/IP Configuration-->IP Configurations--> ipconfig1--> Private IP address setting, static--> click save.
+  
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1898" height="1106" alt="Screenshot 2025-09-01 161621" src="https://github.com/user-attachments/assets/7b54f25d-756b-493a-b835-8ab04efc9dd6" />
+
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
