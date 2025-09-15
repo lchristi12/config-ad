@@ -107,34 +107,42 @@ To disable the firewall, go to the start menu and click run--> type wf.msc--> cl
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1824" height="1144" alt="Screenshot 2025-09-01 165143" src="https://github.com/user-attachments/assets/2be43084-4e8e-49a3-8432-03b2967c3407" />
+<img width="1864" height="1234" alt="Screenshot 2025-09-01 165329" src="https://github.com/user-attachments/assets/c628c938-8b64-4d42-8989-dd5cf32acc28" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+After the VM is created, set Client-1's DNS settings to DC-1's Private IP address. Click on DC-1 VM and located the IP address--> Go to Client-1 VM--> click networking--> network settings--> click on the Network Interface--> DNS servers, Custom and under DNS server, type in DC-1's private IP address--> click save.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1870" height="732" alt="Screenshot 2025-09-01 170316" src="https://github.com/user-attachments/assets/1a791989-03c4-47f0-89d8-a55feb28181a" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, we have to restart Client-1--> go to the VM page and check the box of Client-1 and click restart--> After it restarts, Login to Client-1 and attempt to ping DC-1’s private IP address to ensure the ping succeeded.
+
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1892" height="880" alt="Screenshot 2025-09-01 170653" src="https://github.com/user-attachments/assets/31227131-3671-4e1c-915b-59b0b9e7ba52" />
+<img width="1350" height="454" alt="Screenshot 2025-09-01 172502" src="https://github.com/user-attachments/assets/c11e1053-527d-41db-9975-4b19bb48ba64" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Once logged on into Client-1, obtain the private address of DC-1--> go back to Client-1 and click start and search Powershell and open it. type ping 10.0.0.4 and it should ping. If it says "timeout" it means something went wrong. 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1204" height="1154" alt="Screenshot 2025-09-01 172640" src="https://github.com/user-attachments/assets/5a737058-77b2-4387-9942-e872cee50180" />
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+When you type in ipconfig /all, 
 </p>
 <br />
 
