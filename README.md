@@ -183,6 +183,10 @@ After logging in DC-1 as a domain controller, we are going to create a Domain Ad
 
 <p>
 <img width="1998" height="1044" alt="Screenshot 2025-09-03 001816" src="https://github.com/user-attachments/assets/46db816c-8907-4213-9277-7a610d7a7a83" />
+<img width="862" height="750" alt="Screenshot 2025-09-03 001925" src="https://github.com/user-attachments/assets/d0c02eba-72ab-4e7c-8eca-a8f1490bbe03" />
+<img width="862" height="736" alt="Screenshot 2025-09-03 002120" src="https://github.com/user-attachments/assets/40aa4657-94a9-4f5b-b65e-ad657b58f365" />
+
+
 
 </p>
 <p>
@@ -192,10 +196,20 @@ Create a new employee named “Jane Doe” (same password) with the username of 
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1998" height="1110" alt="Screenshot 2025-09-03 002352" src="https://github.com/user-attachments/assets/d66d15de-938e-4f30-9c4d-611ab44bb18b" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Add jane_admin to the “Domain Admins” Security Group. In Active Directory Users and Computers--> right click Jane Doe--> properties--> member of--> click add--> tyoe in the box Domain Admins and click check names--> click ok--> apply--> ok again. By doing this now the jane_admin is now a  domain admin
+</p>
+<br />
+
+<p>
+<img width="1278" height="504" alt="Screenshot 2025-09-03 002806" src="https://github.com/user-attachments/assets/2933543b-b4bc-425a-a8ad-f899f53b683c" />
+
+</p>
+<p>
+We are going to log out of DC-1 and log back in under Jane Doe but as a Domain Admin. Obtain    DC-1 IP address and logh back in and enter the credentials: mydomain.com\jane_admin and the password you created. You should be able to log in.
 </p>
 <br />
 
@@ -208,18 +222,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+<img width="2322" height="1076" alt="Screenshot 2025-09-03 003345" src="https://github.com/user-attachments/assets/a6a5cb5f-8077-4693-b20d-7fc461bb5c0d" />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Join Client-1 to your domain (mydomain.com). Login to Client-1 as the original local admin (username) and join it to the domain 
+
 </p>
 <br />
 
