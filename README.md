@@ -142,39 +142,52 @@ Once logged on into Client-1, obtain the private address of DC-1--> go back to C
 
 </p>
 <p>
-When you type in ipconfig /all, 
+When you type in ipconfig /all, you will be able to see information pertaining to DC-1 including the private IP address and DNS servers.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="2566" height="1318" alt="Screenshot 2025-09-02 234707" src="https://github.com/user-attachments/assets/0c087a92-dab4-4aaa-8d53-1395e9554582" />
+  <img width="1552" height="1034" alt="Screenshot 2025-09-02 234856" src="https://github.com/user-attachments/assets/782b6684-9ace-4977-82d6-df1ce724d3c6" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+For this next section, we are going to install Active Directory--> Log into DC-1 and install Active Directory Domain Services--> click start--> server manager--> add roles and features--> click next until server roles--> check Active Directory domain services, add features--> click next until confirmation, check box for restarting computer and click install.
+</p>
+<br />
+
+<p>          
+<img width="1848" height="818" alt="Screenshot 2025-09-02 235255" src="https://github.com/user-attachments/assets/0ed1efd8-96c6-47df-a87d-da2eccf27301" />
+<img width="1528" height="1118" alt="Screenshot 2025-09-02 235431" src="https://github.com/user-attachments/assets/98744b4c-8aae-4b0b-9be9-232f78daa1d9" />
+
+
+</p>
+<p>
+Back to Server Manager in DC-1, we are going to promote as a domain controller--> click "promote this server to a domain controller--> add a new forest--> under root domain name--> put mydomain.com (can be any name, just remember it)--> click next until the installtion process and once finished, the computer will restart.
+  After, we have to log back in to DC-1 as a user: mydomain.com\(username) make sure you use the correct backslash. Since now DC-1 is a domain controller now, the login has to be more specific.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1994" height="1052" alt="Screenshot 2025-09-03 001210" src="https://github.com/user-attachments/assets/e4e960b9-d050-485a-abdf-1cdfd8017c8a" />
+<img width="1990" height="1052" alt="Screenshot 2025-09-03 001346" src="https://github.com/user-attachments/assets/e9ee0fdb-3a43-4bde-a24e-f10b780d05c2" />
+<img width="862" height="742" alt="Screenshot 2025-09-03 001450" src="https://github.com/user-attachments/assets/4222bb0e-01ea-4ca6-a766-e675ef240598" />
+<img width="392" height="1034" alt="Screenshot 2025-09-03 001628" src="https://github.com/user-attachments/assets/0499bd93-f5a7-4722-a124-08c3ebd6bf64" />
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+After logging in DC-1 as a domain controller, we are going to create a Domain Admin user within the domain. In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU)--> click start--> windows admistrative tools--> active directory users and computers, on here, right click mydomain.com--> new--> organizational unit, name it (_EMPLOYEES), repeat and create (_ADMINS) make sure not to mess this part up
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+<img width="1998" height="1044" alt="Screenshot 2025-09-03 001816" src="https://github.com/user-attachments/assets/46db816c-8907-4213-9277-7a610d7a7a83" />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create a new employee named “Jane Doe” (same password) with the username of “jane_admin”/ (password). In Active Directory Users and Computers--> right click _ADMINS--> new--> user--> name the user Jane Doe, user logon name is jane_admin--> create a password (remember it)
+
 </p>
 <br />
 
