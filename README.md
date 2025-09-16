@@ -285,83 +285,66 @@ You will see three primary settings that you need to configure: Account Lockout 
 
 <p>
 <img width="994" height="574" alt="Screenshot 2025-09-03 234553" src="https://github.com/user-attachments/assets/6ab925d7-2b22-4a05-b1bc-66ba69aeb329" />
+<img width="1098" height="296" alt="Screenshot 2025-09-03 234821" src="https://github.com/user-attachments/assets/ed55d349-fa07-42ef-b1b7-bafde6d973b8" />
 
 </p>
 <p>
-Next, we have to update Group Policy. You can wait for the Group Policy to propagate automatically, or you can force an update immediately. On Client-1, open Command Prompt and type gpupdate /force, then press Enter.
+Next, we have to update Group Policy. You can wait for the Group Policy to propagate automatically, or you can force an update immediately. On Client-1, open Command Prompt and type gpupdate /force, then press Enter. The Group Policy should now be applied. After, select one of the users and try to fail login in 5 times to see if it gets locked out.
 
 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1908" height="1056" alt="Screenshot 2025-09-03 235002" src="https://github.com/user-attachments/assets/69fc787c-a4de-460e-95f4-2e5ad93c2ad8" />
+<img width="1836" height="748" alt="Screenshot 2025-09-03 011120" src="https://github.com/user-attachments/assets/1004c388-eab9-4c48-b4f2-867fd9398980" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In Active Directory Users and Computers in DC-1--> go to _EMPLOYEES and the user you chose--> go to the account tab and you will see that the box is checked to show that the account is locked out. Uncheck the box to unlock the account. Try to login with the user after and you should be able to login now.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1092" height="528" alt="Screenshot 2025-09-03 235650" src="https://github.com/user-attachments/assets/94633bc8-3300-44f6-b6ae-6d4474955306" />
+<img width="1030" height="1044" alt="Screenshot 2025-09-03 235930" src="https://github.com/user-attachments/assets/bf8fe190-70b2-443b-a088-2b64965d1c77" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+To reset password--> In DC-1--> go to Active Directory users and computers and search the user and click on it--> right click the name and click reset password and/or disable accounts as well.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="2100" height="1416" alt="Screenshot 2025-09-04 000744" src="https://github.com/user-attachments/assets/0207476b-dfd0-4175-8348-a38923cd0311" />
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+To search up the logs to see past login attempts--> search eventvwr.msc and observe to login attempts/failures.
+</p>
+<br />
+<img width="1560" height="468" alt="Screenshot 2025-09-04 001019" src="https://github.com/user-attachments/assets/f15a6436-734e-40e8-b0d0-f4664aca8e10" />
+<img width="908" height="946" alt="Screenshot 2025-09-04 001206" src="https://github.com/user-attachments/assets/9585019c-3950-40d1-b99f-6809c4064c37" />
+
+<p>
+
+
+</p>
+<p>
+If the login attempts/failures are not present--> go back to Client-1--> search eventvwr.msc and run as administrator--> enter credentials for jane_admin--> and you should be able to see the login attempts/failures of the users.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+<img width="2300" height="1396" alt="Screenshot 2025-09-04 001417" src="https://github.com/user-attachments/assets/94b2fb9c-4f31-49b8-89a5-e3cd46139300" />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+This concludes this tutorial of Active Directory and I hope you find this helpful. Do not forget to delete the VMs so no additional charges apply to your account.
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+
+
