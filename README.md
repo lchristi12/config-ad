@@ -214,60 +214,83 @@ We are going to log out of DC-1 and log back in under Jane Doe but as a Domain A
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
 <img width="2322" height="1076" alt="Screenshot 2025-09-03 003345" src="https://github.com/user-attachments/assets/a6a5cb5f-8077-4693-b20d-7fc461bb5c0d" />
+<img width="1288" height="714" alt="Screenshot 2025-09-03 003522" src="https://github.com/user-attachments/assets/5225ec63-40c8-4010-89d1-a874ecbe92e8" />
+
 
 </p>
 <p>
-Join Client-1 to your domain (mydomain.com). Login to Client-1 as the original local admin (username) and join it to the domain 
+Now we have to join Client-1 to your domain (mydomain.com). Obtain IP address of Client-1 and login as the original local admin (username) and join it to the domain (computer will restart)--> right click start and go to system--> rename this PC (advanced)--> under the computer name tab, click change--> click on domain and type in box, mydomain.com--> click ok--> a windows security pop up should appear and enter the mydomain.com\jane_admin and password credentials and should grant permission to join the domain. A pop up should appear after welcoming you to the domain.
+</p>
+<br />
+
+<p>
+<img width="1500" height="1042" alt="Screenshot 2025-09-03 004054" src="https://github.com/user-attachments/assets/0fd96f98-ea75-417b-848a-7c21c9efa61c" />
+<img width="1494" height="1046" alt="Screenshot 2025-09-03 004208" src="https://github.com/user-attachments/assets/4828252a-a5a1-4ccd-91db-21c9d3211a41" />
+
+
+</p>
+<p>
+Log back on to DC-1--> go to Active Directory Users and Computers to verify that Client-1 appears there. Next, create a new organization unit and call it _CLIENTS and drag Client-1 it into the _CLIENTS organization unit.
 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="892" height="908" alt="Screenshot 2025-09-03 005220" src="https://github.com/user-attachments/assets/10a25391-05c8-4d0f-b4e4-a73e9a2deced" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+We are going to setup Remote Desktop for non-administrative users on Client-1. Locate the IP address of Client-1 and log into Client-1 as mydomain.com\jane_admin. Once logged on--> open system--> select users that can remotely access this PC--> click add--> type domain users--> click ok. You can now log into Client-1 as a normal, non-administrative user now.
+
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="2566" height="1328" alt="Screenshot 2025-09-03 005912" src="https://github.com/user-attachments/assets/0db671c5-bb4b-4799-b99a-23b3fdb0e93b" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, We are going to create a bunch of additional users and attempt to log into client-1 with one of the users--> Login to DC-1 as jane_admin--> Open PowerShell_ise as an administrator--> you are going to copy and paste the following script https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1 and run the script and observe the accounts being created.
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="876" height="606" alt="Screenshot 2025-09-03 010917" src="https://github.com/user-attachments/assets/c8e9197d-55a6-452d-9a5c-641d8433ba04" />
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In Active Directory Users and Computers, pick one of the users (remember which one you used) and attempt to log into Client-1 with one of the accounts. (take note of the password in the script) You should be able to login.
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1586" height="1298" alt="Screenshot 2025-09-03 233053" src="https://github.com/user-attachments/assets/42c8c240-91b9-4203-90af-a1af6e1dddee" />
+<img width="1712" height="1116" alt="Screenshot 2025-09-03 233611" src="https://github.com/user-attachments/assets/d7211a44-a091-4564-9114-bfa9bde6fe6c" />
+<img width="532" height="220" alt="image" src="https://github.com/user-attachments/assets/08d28186-5c74-41b3-b900-1bd2889241d6" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next we are going to be dealing with Account Lockouts but we are going to configure account lockout threshold in group policy--> Get logged into dc-1--> go to run and type gpmc.msc and click enter--> right click default domain policy and click edit--> In the Group Policy Management Editor, expand the following: Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy.
+
+You will see three primary settings that you need to configure: Account Lockout Duration which is the time in minutes that an account remains locked before it is automatically unlocked--> Account Lockout Threshold which is the number of failed logon attempts that will trigger an account lockout--> Reset Account Lockout Counter after which is the time in minutes after which the failed logon attempts counter is reset to 0, assuming there are no additional failed logon attempts.
+
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="994" height="574" alt="Screenshot 2025-09-03 234553" src="https://github.com/user-attachments/assets/6ab925d7-2b22-4a05-b1bc-66ba69aeb329" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, we have to update Group Policy. You can wait for the Group Policy to propagate automatically, or you can force an update immediately. On Client-1, open Command Prompt and type gpupdate /force, then press Enter.
+
+
 </p>
 <br />
 
