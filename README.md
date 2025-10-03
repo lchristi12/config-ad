@@ -48,7 +48,8 @@ First, create a resource group--> Make sure it is on the correct subscription-->
 <br />
 
 <p>
-<img width="1138" height="1254" alt="Screenshot 2025-09-01 152120" src="https://github.com/user-attachments/assets/d734b413-85fe-438b-814d-08d40273704e" />
+<img width="1686" height="1210" alt="Screenshot 2025-09-01 152743" src="https://github.com/user-attachments/assets/6515462f-77d9-4d32-9084-7ed1966525ef" />
+
 
 </p>
 <p>
