@@ -39,7 +39,8 @@ The goal of this tutorial is show how the client VM in Azure can join an Active 
 <br />
 
 <p>
-<img width="1138" height="1254" alt="Screenshot 2025-09-01 152120" src="https://github.com/user-attachments/assets/306e4754-c66a-482d-bf10-85454b43262f" />
+<img width="1150" height="1268" alt="Screenshot 2025-09-01 141621" src="https://github.com/user-attachments/assets/57f76199-2fde-467a-918c-b215f2c652a0" />
+
 
 </p>
 <p>
@@ -48,18 +49,23 @@ First, create a resource group--> Make sure it is on the correct subscription-->
 <br />
 
 <p>
-<img width="1686" height="1210" alt="Screenshot 2025-09-01 152743" src="https://github.com/user-attachments/assets/6515462f-77d9-4d32-9084-7ed1966525ef" />
+<img width="1138" height="1254" alt="Screenshot 2025-09-01 152120" src="https://github.com/user-attachments/assets/6cd55400-22d5-4ca9-bfe0-7d35380586e6" />
+
+
 
 
 </p>
 <p>
-Create a Virtual network--> Resource group, Active-Directory-Lab--> Virtual Network Name,   Active-Directory-VNet--> region, East US 2--> review and create.
+Create a Virtual network--> Resource group, Active-Directory-Lab--> Virtual Network Name, Active-Directory-VNet--> region, East US 2--> review and create.
 </p>
 <br />
 
 <p>
+<img width="1686" height="1210" alt="Screenshot 2025-09-01 152743" src="https://github.com/user-attachments/assets/fd11e127-6474-46f3-bdce-1310f05d5eb6" />
+<img width="1686" height="1236" alt="Screenshot 2025-09-01 153129" src="https://github.com/user-attachments/assets/180e723f-97bc-4531-8d1e-67fed4e7dc9a" />
+<img width="1684" height="1214" alt="Screenshot 2025-09-01 153344" src="https://github.com/user-attachments/assets/2430b74c-88c1-44ed-a177-37bc925df8b7" />
 <img width="1942" height="484" alt="Screenshot 2025-09-01 154834" src="https://github.com/user-attachments/assets/b58b132f-445e-4477-9e53-78a6ed7518e1" />
-
+  
 </p>
 <p>
 Next, we are going to create 2 virtual machines. First the domain controller VM. Click create--> resource group, Active-Directory-Lab--> VM name, DC-1--> region, East US 2--> Windows Server 2022 Datacenter: Azure Edition Hotpatch- x64 Gen2--> size, Standard_D2s_v3- 2vcpus, 8GiB memory--> Administrator account--> create username and password--> Check the licensing box--> Next for disk--> make sure the virtual nextwork recently created is selected--> review and create then click create.
